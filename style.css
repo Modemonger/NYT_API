@@ -1,0 +1,167 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+* #container {
+  width: 100vw;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  overflow-x: hidden;
+}
+
+* #container .color {
+  background-color: #fff;
+}
+
+* #container .button_container {
+  position: fixed;
+  top: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 85%;
+  height: 6rem;
+  z-index: 2;
+  background-color: #fff;
+  -webkit-box-shadow: 0 1rem 1rem #fff;
+          box-shadow: 0 1rem 1rem #fff;
+}
+
+* #container .button_container .btn {
+  width: 7rem;
+  height: 3rem;
+  border: #666 solid 2px;
+  border-radius: .5rem;
+  border-bottom: #666 solid 5px;
+  border-left: #666 solid 3px;
+  border-right: #666 solid 3px;
+}
+
+* #container .button_container .btn:active {
+  border-bottom: #666 solid 2px;
+  border-left: #666 solid 2px;
+  border-right: #666 solid 2px;
+}
+
+* #container .card_container {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 80%;
+  margin-top: 6rem;
+}
+
+* #container .card_container .card {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 20rem;
+  height: 21rem;
+  margin: 1.8rem;
+  -webkit-box-shadow: 3px 8px 10px #888;
+          box-shadow: 3px 8px 10px #888;
+}
+
+* #container .card_container .card .section {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 7rem;
+  height: 3rem;
+  border-bottom-right-radius: .8rem;
+  font-size: .9rem;
+}
+
+* #container .card_container .card .card_image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 20em;
+  height: 8em;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-shadow: 0 2px 10px #888;
+          box-shadow: 0 2px 10px #888;
+  z-index: -1;
+}
+
+* #container .card_container .card .card_text_container {
+  position: absolute;
+  top: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 10rem;
+  margin: .5em;
+}
+
+* #container .card_container .card .card_text_container .card_title {
+  margin-bottom: 1rem;
+  margin-top: -1.5rem;
+}
+
+* #container .card_container .card .card_text_container .read_more {
+  position: absolute;
+  bottom: 0;
+}
+/*# sourceMappingURL=style.css.map */

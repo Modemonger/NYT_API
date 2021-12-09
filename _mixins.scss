@@ -1,0 +1,20 @@
+@mixin dfCenter{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+@mixin absoluteTopLeft {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+@mixin btnBorder{
+    border-bottom: #666 solid 5px;
+    border-left: #666 solid 3px;
+    border-right: #666 solid 3px;
+}
+@mixin btnBorderClicked{
+    border-bottom: #666 solid 2px;
+    border-left: #666 solid 2px;
+    border-right: #666 solid 2px;
+}
