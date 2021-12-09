@@ -5,8 +5,11 @@ import {apiKey} from './secret.js';
 //get the base elements and create the container for new ones
 const root = document.getElementById('container');
 const cardContainer = document.createElement('div');
+const background = document.createElement('div');
 cardContainer.className = "card_container";
+background.id = "background";
 root.appendChild(cardContainer);
+
 //get all the different buttons
 const artsBtn = document.getElementById('artsButt');
 const scienceBtn = document.getElementById('scienceButt');
@@ -29,8 +32,9 @@ const articles = async (url, color) => {
     try {
         const res = await fetch(url);
         const article = await res.json();
-        //console.log(url);
         removeAllChildren(cardContainer);
+        removeAllChildren(background);
+        document.body.scrollTop = 0;
         printCards(article);
         changeColor(color);
     } catch(error){
@@ -65,6 +69,7 @@ function printCards(stories){
     stories.results.forEach(el => {
         if(el.section != "admin"){
             createCard(el);
+            makeBackground(el);
         }   
     });
     
@@ -88,24 +93,26 @@ function createCard(story){
     section.classList = "section color";
     section.innerText = story.section.toUpperCase();
     image.className = "card_image";
-    //console.log(story.multimedia[0].url);
     image.src = story.multimedia[0].url;
     textContainer.className = "card_text_container";
     title.className = "card_title";
     title.innerText = story.title;
     subtext.className = "abstract";
     subtext.innerText = story.abstract;
-    readMore.className = "read_more";
-    readMore.innerText = "Read More...";
-    readMore.href = story.url;
-    readMore.target = "blank";
+    if(story.url !== "null"){
+        readMore.className = "read_more";
+        readMore.innerText = "Read More...";
+        readMore.href = story.url;
+        readMore.target = "blank";
+    }
     textContainer.appendChild(title);
     textContainer.appendChild(subtext);
-    textContainer.appendChild(readMore);
     card.appendChild(section);
     card.appendChild(image);
     card.appendChild(textContainer);
+    card.appendChild(readMore);
     cardContainer.appendChild(card);
+    cardContainer.appendChild(background);
 }
 
 function changeColor(color){
@@ -115,4 +122,11 @@ function changeColor(color){
     }
     
 
+}
+
+function makeBackground(story){
+    const image = document.createElement('img');
+    image.className = "back_image";
+    image.src = story.multimedia[0].url;
+    background.appendChild(image);
 }

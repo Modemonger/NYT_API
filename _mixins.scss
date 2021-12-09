@@ -3,6 +3,11 @@
     align-items: center;
     justify-content: center;
 }
+@mixin dfCenterTop{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
 @mixin absoluteTopLeft {
     position: absolute;
     top: 0;
