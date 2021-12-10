@@ -1,6 +1,6 @@
 "use strict";
 
-import {apiKey} from './secret.js';
+//import {apiKey} from './secret.js';
 
 //get the base elements and create the container for new ones
 const root = document.getElementById('container');
@@ -105,14 +105,20 @@ function createCard(story){
         readMore.href = story.url;
         readMore.target = "blank";
     }
-    textContainer.appendChild(title);
-    textContainer.appendChild(subtext);
-    card.appendChild(section);
-    card.appendChild(image);
-    card.appendChild(textContainer);
-    card.appendChild(readMore);
-    cardContainer.appendChild(card);
-    cardContainer.appendChild(background);
+    textContainer.append(
+        title,
+        subtext
+    )
+    card.append(
+        section,
+        image,
+        textContainer,
+        readMore
+    )
+    cardContainer.append(
+        card,
+        background
+    )
 }
 
 function changeColor(color){
@@ -120,8 +126,6 @@ function changeColor(color){
     for (let i = 0; i < elem.length; i++){
         elem[i].style.backgroundColor = color;
     }
-    
-
 }
 
 function makeBackground(story){

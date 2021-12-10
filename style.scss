@@ -15,15 +15,16 @@
             position: absolute;
             top: 0;
             justify-content: center;
-            width: 100vw;
+            width: 90vw;
             height: 100%;
             overflow: hidden;
             display: flex;
             flex-wrap: wrap;
             z-index: -100;
+            overflow-x: visible;
             .back_image{
                 object-fit: cover;
-                width: 27rem;
+                width: 24rem;
                 height: 60rem;
                 filter: blur(5px);
                 opacity: 0.6;
@@ -63,6 +64,7 @@
             justify-content: center;
             width: 80%;
             margin-top: 6rem;
+            overflow-x: hidden;
             .card{
                 position: relative;
                 @include dfCenter;
@@ -72,7 +74,7 @@
                 //border: #aaa solid .5em;
                 box-shadow: 3px 8px 10px #888;
                 background-color: #fff;
-                z-index: -3;
+                z-index: 0;
                 .section{
                     @include absoluteTopLeft;
                     @include dfCenter;
@@ -103,6 +105,7 @@
                     flex-direction: column;
                     height: fit-content;
                     margin: .5em;
+                    z-index: 3;
                     .card_title{
                         margin-bottom: 1rem;
                     }

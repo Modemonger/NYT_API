@@ -31,7 +31,7 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  width: 100vw;
+  width: 90vw;
   height: 100%;
   overflow: hidden;
   display: -webkit-box;
@@ -40,12 +40,13 @@
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   z-index: -100;
+  overflow-x: visible;
 }
 
 * #container #background .back_image {
   -o-object-fit: cover;
      object-fit: cover;
-  width: 27rem;
+  width: 24rem;
   height: 60rem;
   -webkit-filter: blur(5px);
           filter: blur(5px);
@@ -110,6 +111,7 @@
           justify-content: center;
   width: 80%;
   margin-top: 6rem;
+  overflow-x: hidden;
 }
 
 * #container .card_container .card {
@@ -129,7 +131,7 @@
   -webkit-box-shadow: 3px 8px 10px #888;
           box-shadow: 3px 8px 10px #888;
   background-color: #fff;
-  z-index: -3;
+  z-index: 0;
 }
 
 * #container .card_container .card .section {
@@ -196,6 +198,7 @@
   height: -moz-fit-content;
   height: fit-content;
   margin: .5em;
+  z-index: 3;
 }
 
 * #container .card_container .card .card_text_container .card_title {
